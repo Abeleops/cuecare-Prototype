@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adjustments | CueCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="inventory">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <a class="brand-lockup" href="../dashboard.html"
+            ><span class="brand-mark">8</span
+            ><span><strong>Cue</strong>Care</span></a
+          ><button class="sidebar-toggle">☰</button>
+        </div>
+        <div class="workspace-switch">
+          <span class="workspace-avatar">BB</span
+          ><span
+            ><strong>Billy Billiards</strong
+            ><small>Quezon City lounge</small></span
+          ><span class="chevron">⌄</span>
+        </div>
+        <nav class="main-nav">
+          <small class="nav-label">Workspace</small
+          ><a href="../dashboard.html" data-nav="dashboard"
+            ><span>⌂</span>Overview</a
+          ><a href="products.html" data-nav="inventory"
+            ><span>▦</span>Inventory<i>2</i></a
+          ><a href="../pos/transactions.html" data-nav="pos"
+            ><span>◉</span>Transactions</a
+          ><small class="nav-label">Trust center</small
+          ><a href="../security/events.html" data-nav="security"
+            ><span>◌</span>Security events<i class="nav-alert">3</i></a
+          ><a href="../security/findings.html" data-nav="findings"
+            ><span>!</span>Findings</a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-card">
+            <span class="help-icon">?</span>
+            <div>
+              <strong>Need a hand?</strong><small>Open help center</small>
+            </div>
+          </div>
+          <a class="profile-row" href="../login.html"
+            ><span class="avatar avatar-purple">AR</span
+            ><span
+              ><strong>Alex Rivera</strong><small>Operations lead</small></span
+            ><span>↪</span></a
+          >
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu">☰</button>
+          <div class="breadcrumb">
+            <span>Inventory</span><strong>/</strong><span>Adjustments</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn">⌕</button
+            ><button class="icon-btn notification-btn">♢<i></i></button>
+            <div class="topbar-date">Tue, Oct 20, 2026</div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">Inventory control</p>
+              <h1>Stock adjustments</h1>
+              <p class="muted">
+                Record movements, corrections, and write-offs.
+              </p>
+            </div>
+            <button class="btn btn-primary" data-modal-open="adjustModal">
+              ＋ New adjustment
+            </button>
+          </div>
+          <section class="adjustment-layout">
+            <article class="panel form-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Log a movement</h2>
+                  <p>Update stock for a product or location.</p>
+                </div>
+                <span class="step-badge">01</span>
+              </div>
+              <form class="stack-form" id="adjustmentForm">
+                <label
+                  >Product<select>
+                    <option>Premium cue chalk · CO-0012</option>
+                    <option>Aramith cue balls · EQ-0008</option>
+                    <option>House soda · BS-0044</option>
+                  </select></label
+                ><label
+                  >Movement type<select>
+                    <option>Restock / received</option>
+                    <option>Internal transfer</option>
+                    <option>Damaged / write-off</option>
+                    <option>Count correction</option>
+                  </select></label
+                >
+                <div class="form-grid">
+                  <label
+                    >Quantity<input type="number" value="10" min="1" /></label
+                  ><label
+                    >Location<select>
+                      <option>Main lounge</option>
+                      <option>Storage room</option>
+                      <option>Bar counter</option>
+                    </select></label
+                  >
+                </div>
+                <label
+                  >Reason / note<textarea
+                    rows="4"
+                    placeholder="Add a short note for the audit trail..."
+                  ></textarea></label
+                ><button class="btn btn-primary btn-full" type="submit">
+                  Save adjustment
+                </button>
+              </form>
+            </article>
+            <article class="panel history-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Recent adjustments</h2>
+                  <p>Latest stock movements.</p>
+                </div>
+                <a href="#" class="text-link">View log</a>
+              </div>
+              <div class="adjust-list">
+                <div class="adjust-item">
+                  <span class="adjust-sign plus">＋</span>
+                  <div>
+                    <strong>+40 Aramith cue balls</strong
+                    ><small>Received · Main lounge</small>
+                  </div>
+                  <span><b>₱192,000</b><small>Today, 3:42 PM</small></span>
+                </div>
+                <div class="adjust-item">
+                  <span class="adjust-sign minus">−</span>
+                  <div>
+                    <strong>−12 House sodas</strong
+                    ><small>Damaged · Bar counter</small>
+                  </div>
+                  <span><b>−₱8,640</b><small>Today, 1:08 PM</small></span>
+                </div>
+                <div class="adjust-item">
+                  <span class="adjust-sign plus">＋</span>
+                  <div>
+                    <strong>+25 Competition gloves</strong
+                    ><small>Internal transfer · Storage</small>
+                  </div>
+                  <span><b>₱8,750</b><small>Yesterday, 6:25 PM</small></span>
+                </div>
+                <div class="adjust-item">
+                  <span class="adjust-sign minus">−</span>
+                  <div>
+                    <strong>−6 Premium cue chalk</strong
+                    ><small>Count correction · Rack B</small>
+                  </div>
+                  <span><b>−₱1,440</b><small>Yesterday, 3:15 PM</small></span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/products.js"></script>
+  </body>
+</html>

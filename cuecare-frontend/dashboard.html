@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | CueCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <a class="brand-lockup" href="dashboard.html"
+            ><span class="brand-mark">8</span
+            ><span><strong>Cue</strong>Care</span></a
+          ><button class="sidebar-toggle" aria-label="Toggle sidebar">
+            ☰
+          </button>
+        </div>
+        <div class="workspace-switch">
+          <span class="workspace-avatar">BB</span
+          ><span
+            ><strong>Billy Billiards</strong
+            ><small>Quezon City lounge</small></span
+          ><span class="chevron">⌄</span>
+        </div>
+        <nav class="main-nav">
+          <small class="nav-label">Workspace</small
+          ><a href="dashboard.html" data-nav="dashboard"
+            ><span>⌂</span>Overview</a
+          ><a href="inventory/products.html" data-nav="inventory"
+            ><span>▦</span>Inventory<i>2</i></a
+          ><a href="pos/transactions.html" data-nav="pos"
+            ><span>◉</span>Transactions</a
+          ><small class="nav-label">Trust center</small
+          ><a href="security/events.html" data-nav="security"
+            ><span>◌</span>Security events<i class="nav-alert">3</i></a
+          ><a href="security/findings.html" data-nav="findings"
+            ><span>!</span>Findings</a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-card">
+            <span class="help-icon">?</span>
+            <div>
+              <strong>Need a hand?</strong><small>Open help center</small>
+            </div>
+          </div>
+          <a class="profile-row" href="login.html"
+            ><span class="avatar avatar-purple">AR</span
+            ><span
+              ><strong>Alex Rivera</strong><small>Operations lead</small></span
+            ><span>↪</span></a
+          >
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open menu">☰</button>
+          <div class="breadcrumb">
+            <span>Workspace</span><strong>/</strong><span>Overview</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn" aria-label="Search">⌕</button
+            ><button
+              class="icon-btn notification-btn"
+              aria-label="Notifications"
+            >
+              ♢<i></i>
+            </button>
+            <div class="topbar-date">Tue, Oct 20, 2026</div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">Tuesday, 20 October 2026</p>
+              <h1>Good evening, Alex <span class="wave">✦</span></h1>
+              <p class="muted">
+                Here’s the pulse of Billy Billiards right now.
+              </p>
+            </div>
+            <button class="btn btn-secondary" data-toast="Report export queued">
+              Export report <span>↓</span>
+            </button>
+          </div>
+          <section class="metric-grid">
+            <article class="metric-card">
+              <div class="metric-icon metric-icon--cyan">₱</div>
+              <div>
+                <span class="metric-label">Today's sales</span
+                ><strong>₱48,920</strong
+                ><span class="metric-change positive"
+                  >↗ 18.4% <em>vs yesterday</em></span
+                >
+              </div>
+              <div class="sparkline sparkline-cyan">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon metric-icon--yellow">▱</div>
+              <div>
+                <span class="metric-label">Active tables</span
+                ><strong>12 <small>/ 16</small></strong
+                ><span class="metric-change positive"
+                  >↗ 2 <em>since 6pm</em></span
+                >
+              </div>
+              <div class="table-dots">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon metric-icon--magenta">▥</div>
+              <div>
+                <span class="metric-label">Low stock items</span
+                ><strong>08</strong
+                ><span class="metric-change negative"
+                  >↗ 3 <em>need attention</em></span
+                >
+              </div>
+              <div class="ring-progress">
+                <svg viewBox="0 0 36 36">
+                  <path
+                    d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0-31.831"
+                    fill="none"
+                    stroke="#2c3040"
+                    stroke-width="3"
+                  />
+                  <path
+                    d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831"
+                    fill="none"
+                    stroke="#f25aaa"
+                    stroke-width="3"
+                    stroke-dasharray="32, 100"
+                  /></svg
+                ><b>32%</b>
+              </div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon metric-icon--purple">◌</div>
+              <div>
+                <span class="metric-label">Security score</span
+                ><strong>94<span class="metric-unit">/100</span></strong
+                ><span class="metric-change positive"
+                  >↗ 4.1% <em>this month</em></span
+                >
+              </div>
+              <div class="score-bars">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+          </section>
+          <section class="dashboard-grid">
+            <article class="panel sales-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Sales overview</h2>
+                  <p>Track gross sales across the last 7 days.</p>
+                </div>
+                <select aria-label="Sales period">
+                  <option>Last 7 days</option>
+                  <option>Last 30 days</option>
+                </select>
+              </div>
+              <div class="chart-wrap">
+                <div class="chart-y">
+                  <span>₱60k</span><span>₱40k</span><span>₱20k</span
+                  ><span>₱0</span>
+                </div>
+                <div class="line-chart">
+                  <div class="chart-gridlines">
+                    <i></i><i></i><i></i><i></i>
+                  </div>
+                  <svg viewBox="0 0 700 220" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient
+                        id="chartFill"
+                        x1="0"
+                        x2="0"
+                        y1="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0"
+                          stop-color="#32c7db"
+                          stop-opacity=".28"
+                        />
+                        <stop
+                          offset="1"
+                          stop-color="#32c7db"
+                          stop-opacity="0"
+                        />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M0,170 C36,158 45,132 82,144 S124,180 160,137 S206,94 242,118 S282,143 322,104 S365,78 402,101 S450,120 482,82 S528,54 562,80 S616,37 700,48 L700,220 L0,220Z"
+                      fill="url(#chartFill)"
+                    />
+                    <path
+                      d="M0,170 C36,158 45,132 82,144 S124,180 160,137 S206,94 242,118 S282,143 322,104 S365,78 402,101 S450,120 482,82 S528,54 562,80 S616,37 700,48"
+                      fill="none"
+                      stroke="#42d5e7"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                    <circle
+                      cx="616"
+                      cy="37"
+                      r="5"
+                      fill="#42d5e7"
+                      stroke="#191b24"
+                      stroke-width="4"
+                    />
+                  </svg>
+                  <div class="chart-x">
+                    <span>Mon</span><span>Tue</span><span>Wed</span
+                    ><span>Thu</span><span>Fri</span><span>Sat</span
+                    ><span>Sun</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="panel activity-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Live activity</h2>
+                  <p>What’s happening now.</p>
+                </div>
+                <a href="pos/transactions.html" class="text-link">See all</a>
+              </div>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <span class="activity-avatar cyan">AM</span>
+                  <div>
+                    <strong>Ana Morales <span>opened Table 08</span></strong
+                    ><small>8-ball · 2 guests</small>
+                  </div>
+                  <time>2m</time>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-avatar yellow">JT</span>
+                  <div>
+                    <strong>Jay Torres <span>completed a sale</span></strong
+                    ><small>₱1,280 · Counter 02</small>
+                  </div>
+                  <time>7m</time>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-avatar magenta">LM</span>
+                  <div>
+                    <strong>Louie Mercado <span>restocked</span></strong
+                    ><small>House cues · Rack B</small>
+                  </div>
+                  <time>14m</time>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-avatar purple">SV</span>
+                  <div>
+                    <strong>Security scan <span>completed</span></strong
+                    ><small>0 new findings</small>
+                  </div>
+                  <time>22m</time>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="bottom-grid">
+            <article class="panel stock-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Stock watch</h2>
+                  <p>Items that need a second look.</p>
+                </div>
+                <a href="inventory/products.html" class="text-link"
+                  >Manage stock</a
+                >
+              </div>
+              <div class="stock-row">
+                <div class="stock-name">
+                  <span class="product-thumb thumb-cue">⌁</span>
+                  <div>
+                    <strong>Premium cue chalk</strong><small>Consumables</small>
+                  </div>
+                </div>
+                <div class="stock-bar"><span style="width: 18%"></span></div>
+                <strong class="stock-count danger">18 left</strong>
+              </div>
+              <div class="stock-row">
+                <div class="stock-name">
+                  <span class="product-thumb thumb-ball">●</span>
+                  <div>
+                    <strong>Aramith cue balls</strong><small>Equipment</small>
+                  </div>
+                </div>
+                <div class="stock-bar"><span style="width: 32%"></span></div>
+                <strong class="stock-count warning">06 left</strong>
+              </div>
+              <div class="stock-row">
+                <div class="stock-name">
+                  <span class="product-thumb thumb-drink">◒</span>
+                  <div>
+                    <strong>House soda · 330ml</strong><small>Bar stock</small>
+                  </div>
+                </div>
+                <div class="stock-bar"><span style="width: 47%"></span></div>
+                <strong class="stock-count warning">24 left</strong>
+              </div>
+            </article>
+            <article class="panel quick-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Quick actions</h2>
+                  <p>Common tasks, one click away.</p>
+                </div>
+              </div>
+              <div class="quick-actions">
+                <a href="inventory/products.html#add"
+                  ><span>＋</span><strong>Add product</strong
+                  ><small>Update your catalog</small></a
+                ><a href="inventory/adjustments.html"
+                  ><span>↕</span><strong>Adjust stock</strong
+                  ><small>Log a movement</small></a
+                ><a href="security/investigation.html"
+                  ><span>⌕</span><strong>Investigate</strong
+                  ><small>Review a signal</small></a
+                >
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

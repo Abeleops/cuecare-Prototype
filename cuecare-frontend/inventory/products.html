@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | CueCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="inventory">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <a class="brand-lockup" href="../dashboard.html"
+            ><span class="brand-mark">8</span
+            ><span><strong>Cue</strong>Care</span></a
+          ><button class="sidebar-toggle">☰</button>
+        </div>
+        <div class="workspace-switch">
+          <span class="workspace-avatar">BB</span
+          ><span
+            ><strong>Billy Billiards</strong
+            ><small>Quezon City lounge</small></span
+          ><span class="chevron">⌄</span>
+        </div>
+        <nav class="main-nav">
+          <small class="nav-label">Workspace</small
+          ><a href="../dashboard.html" data-nav="dashboard"
+            ><span>⌂</span>Overview</a
+          ><a href="products.html" data-nav="inventory"
+            ><span>▦</span>Inventory<i>2</i></a
+          ><a href="../pos/transactions.html" data-nav="pos"
+            ><span>◉</span>Transactions</a
+          ><small class="nav-label">Trust center</small
+          ><a href="../security/events.html" data-nav="security"
+            ><span>◌</span>Security events<i class="nav-alert">3</i></a
+          ><a href="../security/findings.html" data-nav="findings"
+            ><span>!</span>Findings</a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-card">
+            <span class="help-icon">?</span>
+            <div>
+              <strong>Need a hand?</strong><small>Open help center</small>
+            </div>
+          </div>
+          <a class="profile-row" href="../login.html"
+            ><span class="avatar avatar-purple">AR</span
+            ><span
+              ><strong>Alex Rivera</strong><small>Operations lead</small></span
+            ><span>↪</span></a
+          >
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu">☰</button>
+          <div class="breadcrumb">
+            <span>Inventory</span><strong>/</strong><span>Products</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn">⌕</button
+            ><button class="icon-btn notification-btn">♢<i></i></button>
+            <div class="topbar-date">Tue, Oct 20, 2026</div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">Inventory control</p>
+              <h1>Products</h1>
+              <p class="muted">
+                Keep your catalog and stock levels in one place.
+              </p>
+            </div>
+            <button class="btn btn-primary" data-modal-open="productModal">
+              ＋ Add product
+            </button>
+          </div>
+          <section class="inventory-summary">
+            <div>
+              <span class="metric-label">Catalog items</span><strong>128</strong
+              ><span class="positive">+8 this month</span>
+            </div>
+            <div>
+              <span class="metric-label">Total stock value</span
+              ><strong>₱384,290</strong
+              ><span class="muted">Across 3 locations</span>
+            </div>
+            <div>
+              <span class="metric-label">Reorder soon</span
+              ><strong class="accent-magenta">08</strong
+              ><span class="negative">Needs attention</span>
+            </div>
+            <div>
+              <span class="metric-label">Healthy stock</span><strong>94%</strong
+              ><span class="positive">+2.8% this month</span>
+            </div>
+          </section>
+          <section class="panel table-panel">
+            <div class="table-toolbar">
+              <div class="search-box">
+                <span>⌕</span
+                ><input
+                  id="productSearch"
+                  type="search"
+                  placeholder="Search products"
+                  aria-label="Search products"
+                />
+              </div>
+              <div class="toolbar-actions">
+                <select id="categoryFilter" aria-label="Filter category">
+                  <option value="all">All categories</option>
+                  <option value="equipment">Equipment</option>
+                  <option value="consumables">Consumables</option>
+                  <option value="bar">Bar stock</option></select
+                ><button class="btn btn-secondary" data-toast="Filters reset">
+                  ≡ Filter
+                </button>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table id="productTable">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>SKU</th>
+                    <th>On hand</th>
+                    <th>Unit price</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-category="equipment">
+                    <td>
+                      <div class="table-product">
+                        <span class="product-thumb thumb-ball">●</span>
+                        <div>
+                          <strong>Aramith cue balls</strong
+                          ><small>Premium set · 16 pcs</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Equipment</td>
+                    <td class="mono">EQ-0008</td>
+                    <td><strong>42</strong> <span class="muted">sets</span></td>
+                    <td>₱4,800</td>
+                    <td>
+                      <span class="status-pill status-pill--healthy"
+                        >Healthy</span
+                      >
+                    </td>
+                    <td><button class="more-btn">•••</button></td>
+                  </tr>
+                  <tr data-category="consumables">
+                    <td>
+                      <div class="table-product">
+                        <span class="product-thumb thumb-cue">⌁</span>
+                        <div>
+                          <strong>Premium cue chalk</strong
+                          ><small>Blue · 5 pack</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Consumables</td>
+                    <td class="mono">CO-0012</td>
+                    <td>
+                      <strong>18</strong> <span class="muted">packs</span>
+                    </td>
+                    <td>₱240</td>
+                    <td>
+                      <span class="status-pill status-pill--low"
+                        >Low stock</span
+                      >
+                    </td>
+                    <td><button class="more-btn">•••</button></td>
+                  </tr>
+                  <tr data-category="bar">
+                    <td>
+                      <div class="table-product">
+                        <span class="product-thumb thumb-drink">◒</span>
+                        <div>
+                          <strong>House soda · 330ml</strong
+                          ><small>Assorted flavors</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Bar stock</td>
+                    <td class="mono">BS-0044</td>
+                    <td>
+                      <strong>24</strong> <span class="muted">cases</span>
+                    </td>
+                    <td>₱720</td>
+                    <td>
+                      <span class="status-pill status-pill--low"
+                        >Low stock</span
+                      >
+                    </td>
+                    <td><button class="more-btn">•••</button></td>
+                  </tr>
+                  <tr data-category="equipment">
+                    <td>
+                      <div class="table-product">
+                        <span class="product-thumb thumb-rack">◇</span>
+                        <div>
+                          <strong>Pro triangle rack</strong
+                          ><small>Black composite</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Equipment</td>
+                    <td class="mono">EQ-0021</td>
+                    <td><strong>64</strong> <span class="muted">pcs</span></td>
+                    <td>₱1,100</td>
+                    <td>
+                      <span class="status-pill status-pill--healthy"
+                        >Healthy</span
+                      >
+                    </td>
+                    <td><button class="more-btn">•••</button></td>
+                  </tr>
+                  <tr data-category="consumables">
+                    <td>
+                      <div class="table-product">
+                        <span class="product-thumb thumb-glove">◐</span>
+                        <div>
+                          <strong>Competition gloves</strong
+                          ><small>Right hand · mixed</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Consumables</td>
+                    <td class="mono">CO-0038</td>
+                    <td>
+                      <strong>76</strong> <span class="muted">pairs</span>
+                    </td>
+                    <td>₱350</td>
+                    <td>
+                      <span class="status-pill status-pill--healthy"
+                        >Healthy</span
+                      >
+                    </td>
+                    <td><button class="more-btn">•••</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-footer">
+              <span>Showing <strong>5</strong> of 128 products</span>
+              <div class="pagination">
+                <button disabled>←</button><button class="active">1</button
+                ><button>2</button><button>3</button><span>...</span
+                ><button>26</button><button>→</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="productModal">
+      <div class="modal">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">Inventory</p>
+            <h2>Add product</h2>
+          </div>
+          <button class="modal-close" data-modal-close>×</button>
+        </div>
+        <form class="stack-form" id="productForm">
+          <label
+            >Product name<input required placeholder="e.g. Premium cue chalk"
+          /></label>
+          <div class="form-grid">
+            <label
+              >Category<select>
+                <option>Equipment</option>
+                <option>Consumables</option>
+                <option>Bar stock</option>
+              </select></label
+            ><label>SKU<input required placeholder="CO-0000" /></label>
+          </div>
+          <div class="form-grid">
+            <label
+              >Starting stock<input type="number" required value="0" /></label
+            ><label>Unit price<input type="number" required value="0" /></label>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">
+            Save product
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/products.js"></script>
+  </body>
+</html>

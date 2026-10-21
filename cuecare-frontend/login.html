@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | CueCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-card">
+      <a class="brand-lockup" href="index.html"
+        ><span class="brand-mark">8</span
+        ><span><strong>Cue</strong>Care</span></a
+      >
+      <div class="auth-heading">
+        <p class="eyebrow">Billy Billiards workspace</p>
+        <h1>Welcome back.</h1>
+        <p>Sign in to see what is happening across the floor.</p>
+      </div>
+      <form id="loginForm" class="stack-form">
+        <label
+          >Email address<input
+            type="email"
+            value="manager@billybilliards.test"
+            required /></label
+        ><label
+          >Password
+          <div class="password-wrap">
+            <input type="password" value="demo1234" required /><button
+              type="button"
+              class="input-action"
+              data-toggle-password
+            >
+              Show
+            </button>
+          </div></label
+        >
+        <div class="form-meta">
+          <label class="check-label"
+            ><input type="checkbox" checked /> Remember me</label
+          ><a href="#" class="text-link">Forgot password?</a>
+        </div>
+        <button class="btn btn-primary btn-full" type="submit">
+          Sign in <span>→</span>
+        </button>
+      </form>
+      <p class="demo-note">
+        <span class="dot dot-cyan"></span>Demo access is pre-filled for this
+        prototype.
+      </p>
+    </main>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transactions | CueCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="pos">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <a class="brand-lockup" href="../dashboard.html"
+            ><span class="brand-mark">8</span
+            ><span><strong>Cue</strong>Care</span></a
+          ><button class="sidebar-toggle">☰</button>
+        </div>
+        <div class="workspace-switch">
+          <span class="workspace-avatar">BB</span
+          ><span
+            ><strong>Billy Billiards</strong
+            ><small>Quezon City lounge</small></span
+          ><span class="chevron">⌄</span>
+        </div>
+        <nav class="main-nav">
+          <small class="nav-label">Workspace</small
+          ><a href="../dashboard.html" data-nav="dashboard"
+            ><span>⌂</span>Overview</a
+          ><a href="../inventory/products.html" data-nav="inventory"
+            ><span>▦</span>Inventory<i>2</i></a
+          ><a href="transactions.html" data-nav="pos"
+            ><span>◉</span>Transactions</a
+          ><small class="nav-label">Trust center</small
+          ><a href="../security/events.html" data-nav="security"
+            ><span>◌</span>Security events<i class="nav-alert">3</i></a
+          ><a href="../security/findings.html" data-nav="findings"
+            ><span>!</span>Findings</a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-card">
+            <span class="help-icon">?</span>
+            <div>
+              <strong>Need a hand?</strong><small>Open help center</small>
+            </div>
+          </div>
+          <a class="profile-row" href="../login.html"
+            ><span class="avatar avatar-purple">AR</span
+            ><span
+              ><strong>Alex Rivera</strong><small>Operations lead</small></span
+            ><span>↪</span></a
+          >
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu">☰</button>
+          <div class="breadcrumb">
+            <span>Point of sale</span><strong>/</strong
+            ><span>Transactions</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn">⌕</button
+            ><button class="icon-btn notification-btn">♢<i></i></button>
+            <div class="topbar-date">Tue, Oct 20, 2026</div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">Point of sale</p>
+              <h1>Transactions</h1>
+              <p class="muted">A clear view of every sale across the lounge.</p>
+            </div>
+            <button class="btn btn-primary" data-toast="New sale started">
+              ＋ New sale
+            </button>
+          </div>
+          <section class="pos-summary">
+            <div>
+              <span class="metric-label">Today's revenue</span
+              ><strong>₱48,920</strong><span class="positive">+18.4%</span>
+            </div>
+            <div>
+              <span class="metric-label">Transactions</span><strong>86</strong
+              ><span class="muted">12 in progress</span>
+            </div>
+            <div>
+              <span class="metric-label">Average ticket</span
+              ><strong>₱569</strong
+              ><span class="positive">+₱42 vs last week</span>
+            </div>
+            <div>
+              <span class="metric-label">Refunds</span><strong>₱1,280</strong
+              ><span class="negative">2 requests</span>
+            </div>
+          </section>
+          <section class="panel table-panel">
+            <div class="table-toolbar">
+              <div class="search-box">
+                <span>⌕</span
+                ><input
+                  type="search"
+                  placeholder="Search receipt, customer, or table"
+                  aria-label="Search transactions"
+                />
+              </div>
+              <div class="toolbar-actions">
+                <select aria-label="Filter transaction date">
+                  <option>Today</option>
+                  <option>Yesterday</option>
+                  <option>This week</option></select
+                ><button
+                  class="btn btn-secondary"
+                  data-toast="Receipt export queued"
+                >
+                  Export <span>↓</span>
+                </button>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Receipt</th>
+                    <th>Customer / table</th>
+                    <th>Items</th>
+                    <th>Payment</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mono">#BB-02984</td>
+                    <td>
+                      <strong>Table 08</strong
+                      ><small class="table-sub">Ana Morales</small>
+                    </td>
+                    <td>4 items</td>
+                    <td><span class="payment-dot payment-card"></span> Card</td>
+                    <td><strong>₱1,840</strong></td>
+                    <td>
+                      <span class="status-pill status-pill--healthy">Paid</span>
+                    </td>
+                    <td>8:42 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#BB-02983</td>
+                    <td>
+                      <strong>Table 12</strong
+                      ><small class="table-sub">Jay Torres</small>
+                    </td>
+                    <td>7 items</td>
+                    <td><span class="payment-dot payment-cash"></span> Cash</td>
+                    <td><strong>₱2,320</strong></td>
+                    <td>
+                      <span class="status-pill status-pill--healthy">Paid</span>
+                    </td>
+                    <td>8:37 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#BB-02982</td>
+                    <td>
+                      <strong>Counter 02</strong
+                      ><small class="table-sub">Louie Mercado</small>
+                    </td>
+                    <td>2 items</td>
+                    <td>
+                      <span class="payment-dot payment-gcash"></span> GCash
+                    </td>
+                    <td><strong>₱480</strong></td>
+                    <td>
+                      <span class="status-pill status-pill--healthy">Paid</span>
+                    </td>
+                    <td>8:28 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#BB-02981</td>
+                    <td>
+                      <strong>Table 03</strong
+                      ><small class="table-sub">Sofia Villanueva</small>
+                    </td>
+                    <td>5 items</td>
+                    <td><span class="payment-dot payment-card"></span> Card</td>
+                    <td><strong>₱1,120</strong></td>
+                    <td>
+                      <span class="status-pill status-pill--pending"
+                        >Pending</span
+                      >
+                    </td>
+                    <td>8:20 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#BB-02980</td>
+                    <td>
+                      <strong>Table 01</strong
+                      ><small class="table-sub">Marco Reyes</small>
+                    </td>
+                    <td>3 items</td>
+                    <td><span class="payment-dot payment-cash"></span> Cash</td>
+                    <td><strong>₱720</strong></td>
+                    <td>
+                      <span class="status-pill status-pill--refunded"
+                        >Refunded</span
+                      >
+                    </td>
+                    <td>8:04 PM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-footer">
+              <span>Showing <strong>5</strong> of 86 transactions</span>
+              <div class="pagination">
+                <button disabled>←</button><button class="active">1</button
+                ><button>2</button><button>3</button><span>...</span
+                ><button>18</button><button>→</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>
