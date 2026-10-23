@@ -1,1 +1,190 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Security events | CueCare</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/style.css"/></head><body data-page="security"><div class="app-shell"><aside class="sidebar"><div class="sidebar-top"><a class="brand-lockup" href="../dashboard.html"><span class="brand-mark">8</span><span><strong>Cue</strong>Care</span></a><button class="sidebar-toggle">☰</button></div><div class="workspace-switch"><span class="workspace-avatar">BB</span><span><strong>Billy Billiards</strong><small>Quezon City lounge</small></span><span class="chevron">⌄</span></div><nav class="main-nav"><small class="nav-label">Workspace</small><a href="../dashboard.html" data-nav="dashboard"><span>⌂</span>Overview</a><a href="../inventory/products.html" data-nav="inventory"><span>▦</span>Inventory<i>2</i></a><a href="../pos/transactions.html" data-nav="pos"><span>◉</span>Transactions</a><small class="nav-label">Trust center</small><a href="events.html" data-nav="security"><span>◌</span>Security events<i class="nav-alert">3</i></a><a href="findings.html" data-nav="findings"><span>!</span>Findings</a></nav><div class="sidebar-footer"><div class="help-card"><span class="help-icon">?</span><div><strong>Need a hand?</strong><small>Open help center</small></div></div><a class="profile-row" href="../login.html"><span class="avatar avatar-purple">AR</span><span><strong>Alex Rivera</strong><small>Operations lead</small></span><span>↪</span></a></div></aside><main class="main-content"><header class="topbar"><button class="mobile-menu">☰</button><div class="breadcrumb"><span>Trust center</span><strong>/</strong><span>Security events</span></div><div class="topbar-actions"><button class="icon-btn">⌕</button><button class="icon-btn notification-btn">♢<i></i></button><div class="topbar-date">Tue, Oct 20, 2026</div></div></header><div class="page-content"><div class="page-heading"><div><p class="eyebrow">Trust center</p><h1>Security events</h1><p class="muted">Review access and system activity as it happens.</p></div><span class="live-indicator"><i></i> Monitoring live</span></div><section class="security-overview"><article class="security-score panel"><div class="score-orb"><strong>94</strong><span>/100</span></div><div><p class="eyebrow">Workspace security score</p><h2>Healthy and protected</h2><p class="muted">No critical signals detected in the last 24 hours.</p></div></article><article class="security-mini panel"><span class="metric-icon metric-icon--cyan">✓</span><div><span class="metric-label">Events today</span><strong>248</strong><span class="positive">+12% vs avg.</span></div></article><article class="security-mini panel"><span class="metric-icon metric-icon--magenta">!</span><div><span class="metric-label">Needs review</span><strong>03</strong><span class="negative">2 medium · 1 low</span></div></article></section><section class="panel table-panel"><div class="table-toolbar"><div><h2>Event stream</h2><p class="muted">Most recent access and security events.</p></div><div class="toolbar-actions"><select aria-label="Filter severity"><option>All severities</option><option>Informational</option><option>Warning</option><option>Critical</option></select><button class="btn btn-secondary" data-toast="Event stream refreshed">↻ Refresh</button></div></div><div class="event-stream"><div class="event-row"><span class="event-icon event-info">↗</span><div><strong>Alex Rivera signed in</strong><small>Successful authentication · Chrome on Windows</small></div><span class="event-tag tag-info">Informational</span><time>Just now</time></div><div class="event-row"><span class="event-icon event-warning">!</span><div><strong>Inventory export requested</strong><small>Requested by Alex Rivera · 128 rows</small></div><span class="event-tag tag-warning">Warning</span><time>4 min ago</time></div><div class="event-row"><span class="event-icon event-info">↔</span><div><strong>Role permissions updated</strong><small>Shift lead role · 2 permissions changed</small></div><span class="event-tag tag-info">Informational</span><time>18 min ago</time></div><div class="event-row"><span class="event-icon event-critical">⚠</span><div><strong>Repeated failed sign-in</strong><small>5 attempts · Unknown device · 192.168.1.84</small></div><span class="event-tag tag-critical">Critical</span><time>42 min ago</time></div><div class="event-row"><span class="event-icon event-info">◌</span><div><strong>Automated security scan completed</strong><small>18 checks passed · 0 new findings</small></div><span class="event-tag tag-info">Informational</span><time>1 hr ago</time></div></div><div class="table-footer"><span>Showing <strong>5</strong> latest events</span><a class="text-link" href="findings.html">Open findings →</a></div></section></div></main></div><script src="../js/config.js"></script><script src="../js/api.js"></script><script src="../js/security.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security events | CueCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="security">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <a class="brand-lockup" href="../dashboard.html"
+            ><span class="brand-mark">8</span
+            ><span><strong>Cue</strong>Care</span></a
+          ><button class="sidebar-toggle">☰</button>
+        </div>
+        <div class="workspace-switch">
+          <span class="workspace-avatar">BB</span
+          ><span
+            ><strong>Billy Billiards</strong
+            ><small>Quezon City lounge</small></span
+          ><span class="chevron">⌄</span>
+        </div>
+        <nav class="main-nav">
+          <small class="nav-label">Workspace</small
+          ><a href="../dashboard.html" data-nav="dashboard"
+            ><span>⌂</span>Overview</a
+          ><a href="../inventory/products.html" data-nav="inventory"
+            ><span>▦</span>Inventory<i>2</i></a
+          ><a href="../pos/transactions.html" data-nav="pos"
+            ><span>◉</span>Transactions</a
+          ><small class="nav-label">Trust center</small
+          ><a href="events.html" data-nav="security"
+            ><span>◌</span>Security events<i class="nav-alert">3</i></a
+          ><a href="findings.html" data-nav="findings"
+            ><span>!</span>Findings</a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-card">
+            <span class="help-icon">?</span>
+            <div>
+              <strong>Need a hand?</strong><small>Open help center</small>
+            </div>
+          </div>
+          <a class="profile-row" href="../login.html"
+            ><span class="avatar avatar-purple">AR</span
+            ><span
+              ><strong>Alex Rivera</strong><small>Operations lead</small></span
+            ><span>↪</span></a
+          >
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu">☰</button>
+          <div class="breadcrumb">
+            <span>Trust center</span><strong>/</strong
+            ><span>Security events</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn">⌕</button
+            ><button class="icon-btn notification-btn">♢<i></i></button>
+            <div class="topbar-date">Tue, Oct 20, 2026</div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">Trust center</p>
+              <h1>Security events</h1>
+              <p class="muted">
+                Review access and system activity as it happens.
+              </p>
+            </div>
+            <span class="live-indicator"><i></i> Monitoring live</span>
+          </div>
+          <section class="security-overview">
+            <article class="security-score panel">
+              <div class="score-orb"><strong>94</strong><span>/100</span></div>
+              <div>
+                <p class="eyebrow">Workspace security score</p>
+                <h2>Healthy and protected</h2>
+                <p class="muted">
+                  No critical signals detected in the last 24 hours.
+                </p>
+              </div>
+            </article>
+            <article class="security-mini panel">
+              <span class="metric-icon metric-icon--cyan">✓</span>
+              <div>
+                <span class="metric-label">Events today</span
+                ><strong>248</strong><span class="positive">+12% vs avg.</span>
+              </div>
+            </article>
+            <article class="security-mini panel">
+              <span class="metric-icon metric-icon--magenta">!</span>
+              <div>
+                <span class="metric-label">Needs review</span><strong>03</strong
+                ><span class="negative">2 medium · 1 low</span>
+              </div>
+            </article>
+          </section>
+          <section class="panel table-panel">
+            <div class="table-toolbar">
+              <div>
+                <h2>Event stream</h2>
+                <p class="muted">Most recent access and security events.</p>
+              </div>
+              <div class="toolbar-actions">
+                <select aria-label="Filter severity">
+                  <option>All severities</option>
+                  <option>Informational</option>
+                  <option>Warning</option>
+                  <option>Critical</option></select
+                ><button
+                  class="btn btn-secondary"
+                  data-toast="Event stream refreshed"
+                >
+                  ↻ Refresh
+                </button>
+              </div>
+            </div>
+            <div class="event-stream">
+              <div class="event-row">
+                <span class="event-icon event-info">↗</span>
+                <div>
+                  <strong>Alex Rivera signed in</strong
+                  ><small>Successful authentication · Chrome on Windows</small>
+                </div>
+                <span class="event-tag tag-info">Informational</span
+                ><time>Just now</time>
+              </div>
+              <div class="event-row">
+                <span class="event-icon event-warning">!</span>
+                <div>
+                  <strong>Inventory export requested</strong
+                  ><small>Requested by Alex Rivera · 128 rows</small>
+                </div>
+                <span class="event-tag tag-warning">Warning</span
+                ><time>4 min ago</time>
+              </div>
+              <div class="event-row">
+                <span class="event-icon event-info">↔</span>
+                <div>
+                  <strong>Role permissions updated</strong
+                  ><small>Shift lead role · 2 permissions changed</small>
+                </div>
+                <span class="event-tag tag-info">Informational</span
+                ><time>18 min ago</time>
+              </div>
+              <div class="event-row">
+                <span class="event-icon event-critical">⚠</span>
+                <div>
+                  <strong>Repeated failed sign-in</strong
+                  ><small>5 attempts · Unknown device · 192.168.1.84</small>
+                </div>
+                <span class="event-tag tag-critical">Critical</span
+                ><time>42 min ago</time>
+              </div>
+              <div class="event-row">
+                <span class="event-icon event-info">◌</span>
+                <div>
+                  <strong>Automated security scan completed</strong
+                  ><small>18 checks passed · 0 new findings</small>
+                </div>
+                <span class="event-tag tag-info">Informational</span
+                ><time>1 hr ago</time>
+              </div>
+            </div>
+            <div class="table-footer">
+              <span>Showing <strong>5</strong> latest events</span
+              ><a class="text-link" href="findings.html">Open findings →</a>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/security.js"></script>
+  </body>
+</html>
